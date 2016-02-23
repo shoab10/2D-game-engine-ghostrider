@@ -1,0 +1,42 @@
+Name: Shoab Ahmed
+Clemson Email Address: shoaba@clemson.edu
+
+Project no: 7
+Project due date: Friday,  Nov 5, 8 AM
+Project description: A Playable Game
+
+Game Name : Ghost Blaster!
+
+The Specs that I implemented are: All
+
+AI implemented : when player comes near the enemy, enemy skeletons start shooting and moving towards player.
+Conclusion : Kill 8 enemies to win the game.
+             Ghostrider dies when health is depleted completed.
+
+The Specs that I was unable to implement are: None
+
+Extras: 1)Move Ghost Rider by pressing a and d
+		2)Painter's algorithm implemented on the falling flames
+		3)Parallax scrolling.
+		3)Building sprite out of raw sprite sheet.
+
+Important Note :
+Getting valgrind error 1306 in 1 context. After checking it throughly I came to the conclusion that
+it maybe due to the sprite sheet I am using since I checked it in different program without errors.
+
+Directions:
+1. to change direction of Ghost Rider press a and d keys.
+
+2. to shoot the flaming tree press space.
+
+3. toggle music by pressing m.
+
+Story:
+Ghost rider moves along the burning city taking revenge from the enemies that come along. He uses his chain whip to kill enemies. The game may end after a time frame or when he reaches the end of the world. Scores are maintained from the number of enemies killed.
+
+
+References
+
+Ghost rider sprite sheet - google images.
+
+boomerang -  https://www.google.com/search?safe=off&biw=1313&bih=662&tbm=isch&sa=1&q=sprite+boomerang&btnG=#facrc=_&imgdii=_&imgrc=vdw6tceYvPL9AM%253A%3BewsW1izHm_zb5M%3Bhttp%253A%252F%252Fgallery.zeldalegends.net%252Fcategories%252FA_Link_to_the_Past%252FOfficial_Art%252FItems%252Fb-boomerang.jpg%3Bhttp%253A%252F%252Fwww.zeldauniverse.net%252Fforums%252Fzelda-theorizing%252F51880-item-evolution.html%3B175%3B213

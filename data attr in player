@@ -1,0 +1,44 @@
+//data attr in player
+
+std::string bulletName;
+float bulletInterval; ---
+float timeSinceLastBullet; ---
+float minBulletSpeed; --
+MultiBullets bullets;
+
+
+what is getVelocity();????
+
+
+//function to shoot
+
+void Twowayshooter::shoot() {
+	//Switch to frames for shooting:
+	if (velocityX() > 0) { frames = framesShootingRight;}
+	else { frames=framesShootLeft;}
+
+	//See if its time to shoot a bullet:
+
+	if (timeSinceLastBullet > bulletInterval) {
+	Vector2f vel =getVelocity();
+	float x;
+	float y = Y()+frameHeight/4;
+	if (vel[0] > 0) {
+	x = X()+ frameWidth;
+	vel[0] += minBulletSpeed;
+	}
+	else {
+	x=X();
+	vel[0] -= minBulletSpeed;
+	}
+	std::cout <<"computed vel:" << vel << std::endl;
+	bullets.shoot (vector2f(x,y),vel);
+	timeSinceLastBullet = 0;
+
+	}
+}
+//add in update function last
+timeSinceLastBullet += ticks;
+bullets.update(ticks);
+
+
