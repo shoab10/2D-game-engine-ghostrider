@@ -24,6 +24,16 @@ macOS has no SDL 1.2, so the game runs on `sdl12-compat` (the SDL 1.2 API on top
 
 3. Build and run with the same commands below.
 
+Controls
+- `a` / `d` — move Ghost Rider left / right
+- `space` — shoot
+- `m` — toggle music
+- `p` — pause
+- `s` — toggle slo-mo
+- `F1` — toggle HUD
+- `F4` — capture frames to `frames/`
+- `q` / `ESC` — quit
+
 Commands to run
 - make  #to compile and make the project
 - make clean	# to clean the compiled file

@@ -13,7 +13,7 @@ The project uses a flat Makefile that compiles every `*.cpp` in the repo root in
 - `make vg` — run under valgrind
 - `./run` — start the game directly
 
-The Makefile invokes `sdl-config` (SDL **1.2**, not SDL2). On macOS / Linux, install: `g++`, `clang`, `libexpat1-dev`, `libsdl1.2-dev`, `libsdl-mixer1.2-dev`, `libsdl-image1.2-dev`, `libsdl-gfx1.2-dev`, `libsdl-sound1.2-dev`, `libsdl-ttf2.0-dev`.
+The Makefile invokes `sdl-config` (SDL **1.2**, not SDL2). On Linux, install: `g++`, `clang`, `libexpat1-dev`, `libsdl1.2-dev`, `libsdl-mixer1.2-dev`, `libsdl-gfx1.2-dev`, `libsdl-sound1.2-dev`, `libsdl-ttf2.0-dev`. SDL_image is **not** required — image decoding uses the bundled `stb_image.h` (the Makefile does not link `-lSDL_image`). macOS has no SDL 1.2; build against `sdl12-compat` per the macOS section of `README.md`.
 
 There is no test suite.
 
@@ -52,5 +52,5 @@ Pressing F4 toggles `makeVideo`. The Manager then writes up to `frameMax` BMPs i
 - All `.cpp`/`.h` live in the repo root — there is no `src/` directory.
 - `xmlSpec/game.xml` — the canonical game-tuning file; `xmlSpec/menu.xml` — menu layout.
 - `images/`, `sound/`, `font/` — runtime assets referenced by paths inside the XML.
-- Stray artifacts to ignore: `menuManager.d.13745` (leftover dependency-file fragment from an interrupted `make`), `data attr in player` (scratch notes), `video.mp4` (10 MB committed demo clip).
+- Build artifacts (`*.o`, `*.d`), orphaned dependency-file fragments (`*.d.*` from interrupted makes), the `run` binary, and runtime-captured `frames/*.bmp` are all git-ignored (see `.gitignore`). The older scratch files (`data attr in player`, `video.mp4`, leftover `menuManager.d.NNNNN`) were removed in commit `7fcb151`.
 - README.md is a brief project description; the plain `README` file contains the original Clemson CPSC 870 assignment notes — useful for understanding original intent, not for current development.
