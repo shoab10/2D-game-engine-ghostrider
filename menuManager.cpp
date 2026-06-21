@@ -86,6 +86,7 @@ void MenuManager::play() {
     menu.draw();
     SDL_Flip(screen);
 
+    event.type = 0;   // clear stale event: SDL_PollEvent leaves it untouched when no event is pending
     SDL_PollEvent(&event);
     if (event.type ==  SDL_QUIT) { break; }
     if(event.type == SDL_KEYDOWN) {

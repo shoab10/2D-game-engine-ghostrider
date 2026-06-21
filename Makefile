@@ -1,9 +1,10 @@
 # Written by DJ Edmonson
 # Warnings frequently signal eventual errors:
-CXXFLAGS=`sdl-config --cflags` -g -W -Wall -Weffc++ -Wextra -pedantic -O0
+CPPFLAGS=`sdl-config --cflags` -I/opt/homebrew/include
+CXXFLAGS=$(CPPFLAGS) -g -W -Wall -Weffc++ -Wextra -pedantic -O0
 
 # Linker flags for both OS X and Linux
-LDFLAGS = `sdl-config --libs` -lSDL_ttf -lSDL_image -lexpat -lSDL_gfx -lSDL_mixer
+LDFLAGS = `sdl-config --libs` -L/opt/homebrew/lib -lSDL_ttf -lexpat -lSDL_gfx -lSDL_mixer
 
 # Generates list of object files from all the
 #   source files in directory

@@ -392,6 +392,7 @@ void Manager::play() {
     return;
   }
 
+    event.type = 0;   // clear stale event: SDL_PollEvent leaves it untouched when no event is pending
     SDL_PollEvent(&event);
     Uint8 *keystate = SDL_GetKeyState(NULL);
     if (event.type ==  SDL_QUIT) { done = true; break; }

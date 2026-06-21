@@ -2,7 +2,6 @@
 #define SINGLE__H
 #include <SDL.h>
 #include <SDL_ttf.h>
-#include <SDL_image.h>
 #include <string>
 #include <sstream>
 using std::string;

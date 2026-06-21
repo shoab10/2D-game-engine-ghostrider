@@ -1,0 +1,11 @@
+# Build output (flat build: objects/deps land next to sources)
+*.o
+*.d
+# Orphaned dependency-file fragments from interrupted makes (e.g. world.d.40154)
+*.d.*
+
+# Compiled binary
+/run
+
+# Frames captured at runtime via F4
+frames/*.bmp
